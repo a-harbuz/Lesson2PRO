@@ -20,6 +20,6 @@ class MainTest {
         Mockito.when(main.makePaymentTest()).thenReturn(true);
         boolean actualResult = main.makePaymentTest();
         Assertions.assertTrue(actualResult);
-        //Mockito.verify(System.out,Mockito.times(5)).println(Mockito.anyString());
+        Mockito.verify(System.out,Mockito.times(5)).println(Mockito.anyString());
     }
 }
