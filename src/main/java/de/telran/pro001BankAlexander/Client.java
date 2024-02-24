@@ -1,4 +1,4 @@
-package de.telran.pro001BankMain;
+package de.telran.pro001BankAlexander;
 
 import java.io.Serializable;
 import java.time.LocalDate;

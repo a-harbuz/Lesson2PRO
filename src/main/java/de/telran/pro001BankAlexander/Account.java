@@ -1,4 +1,4 @@
-package de.telran.pro001BankMain;
+package de.telran.pro001BankAlexander;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
