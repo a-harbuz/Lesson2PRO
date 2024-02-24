@@ -2,7 +2,7 @@ package de.telran.pro005CyclingBarier;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
-public class Main3 {
+public class Barrier {
     private static final int NUM_THREADS = 3;
     public static void main(String[] args) {
         Runnable task = () -> {
@@ -21,7 +21,21 @@ public class Main3 {
             System.out.println("All threads reached the barrier, let's continue...");
         });
 
+        thRun(task,barrier);
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        thRun(task,barrier);
+        //Thread.interrupt(); //прерывание потока
+        //while (!Thread.currentThread().isInterrupted()) {
+            // Выполнение какой-то работы
+        //}
         //===========================================================================
+    }
+
+    public static void thRun(Runnable task, CyclicBarrier barrier) {
         // ИСКУССОНОЕ Создание и запуск потоков !!
         for (int i = 0; i < NUM_THREADS; i++) {
             Thread thread = new Thread(() -> {
@@ -37,4 +51,5 @@ public class Main3 {
             thread.start();
         }
     }
+
 }
