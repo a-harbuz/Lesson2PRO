@@ -10,11 +10,17 @@ import java.util.UUID;
 
 public class Main {
     public static void main(String[] args) {
+        generate("liqu1.txt");
+        generate("liqu2.txt");
+        generate("liqu3.txt");
+        generate("liqu4.txt");
+    }
+    public static void generate(String writeFile) {
         Faker faker = new Faker();
         String readPath ="C:\\JAVA\\Lesson2PRO\\src\\main\\java\\de\\telran\\xmlLiquiBaseGenerator\\inputData\\";
         String writePath = "C:\\JAVA\\Lesson2PRO\\src\\main\\java\\de\\telran\\xmlLiquiBaseGenerator\\";
 
-        String writeFile = "liqu1.txt";
+        //String writeFile = "liqu1.txt";
 
         try (BufferedReader reader = new BufferedReader(new FileReader(readPath+"input.txt"));
              FileWriter writer = new FileWriter(writePath+writeFile)) {
