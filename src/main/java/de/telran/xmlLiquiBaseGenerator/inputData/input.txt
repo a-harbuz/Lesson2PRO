@@ -1,0 +1,84 @@
+Table: vehicle
+id
+vehicle_type
+name
+model
+year_manufacture
+car_number
+initial_kilometers
+price
+vehicle_status
+created_at
+
+Table: contract
+id
+contract_number
+contract_name
+cost_transportation_under_contract
+total_cost_transported_goods
+contract_status
+created_at
+//company_id
+
+Table: task
+id
+transportation_date
+address_from
+address_to
+weight_cargo
+waybill_number
+waybill_cost
+distance_traveled_kilometers
+fuel_costs_traveled
+task_status
+comment_if_task_canceled
+created_at
+//contract_id
+//company_id
+//vehicle_id
+//employee_id
+
+
+Table: maintenance
+id
+service_type
+maintenance_cost
+maintenance_kilometers
+created_at
+//vehicle_id
+//company_id
+
+Table: company
+id
+company_name
+contact_first_name
+contact_last_name
+email
+address
+phone
+created_at
+
+Table: employee
+id
+first_name
+last_name
+is_driver
+is_working
+created_at
+employee_info_id
+
+Table: employee_info
+id
+address
+phone
+driving_license_category
+login
+password
+
+Table: role
+r_id
+first_name
+
+Table: authority
+a_id
+authority_name

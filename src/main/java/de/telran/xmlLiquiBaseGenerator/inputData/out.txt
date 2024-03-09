@@ -1,0 +1,25 @@
+    <changeSet author="o.harbuz" id="insert test data into .... table">
+        <insert tableName="products">
+            <column name="id" value="3"/>
+            <column name="name" value="mortgage"/>
+            <column name="min_sum" value="10000"/>
+            <column name="max_sum" value="2000000"/>
+            <column name="currency_code" value="USD"/>
+            <column name="min_interest_rate" value="2"/>
+            <column name="max_interest_rate" value="3"/>
+            <column name="need_guarantees" value="false"/>
+            <column name="delivery_in_cash" value="false"/>
+            <column name="early_repayment" value="false"/>
+            <column name="need_income_details" value="false"/>
+            <column name="min_period_months" value="33"/>
+            <column name="max_period_months" value="87"/>
+            <column name="is_active" value="true"/>
+            <column name="details" value="text1"/>
+            <column name="calculation_mode" value="ANNUITY"/>
+            <column name="grace_period_months" value="12"/>
+            <column name="rate_is_adjustable" value="false"/>
+            <column name="rate_base" value="425"/>
+            <column name="rate_fix_part" value="1"/>
+            <column name="increased_rate" value="1"/>
+        </insert>
+    </changeSet>
