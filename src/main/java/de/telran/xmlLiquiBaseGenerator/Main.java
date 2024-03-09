@@ -21,8 +21,8 @@ public class Main {
             String line;
 
             int count=0;
-            UUID uuid = UUID.randomUUID();
-            String value = "";
+            //UUID uuid = UUID.randomUUID();
+            String value;
             String nametable = "";
             while ((line = reader.readLine()) != null) {
                 //System.out.println(line); // Выводим прочитанную строку
@@ -55,8 +55,8 @@ public class Main {
                     if (nametable.equals("task") && line.equals("address_to")) value = faker.address().fullAddress();
 
                     if (nametable.equals("company") && line.equals("company_name")) value = faker.company().name();
-                    if (nametable.equals("company") && line.equals("contact_first_name")) value = faker.name().firstName();;
-                    if (nametable.equals("company") && line.equals("contact_last_name")) value = faker.name().lastName();;
+                    if (nametable.equals("company") && line.equals("contact_first_name")) value = faker.name().firstName();
+                    if (nametable.equals("company") && line.equals("contact_last_name")) value = faker.name().lastName();
                     if (nametable.equals("company") && line.equals("email")) value = faker.name().lastName().toLowerCase()+"@gmail.com";
                     if (nametable.equals("company") && line.equals("address")) value = faker.address().fullAddress();
                     if (nametable.equals("company") && line.equals("phone")) value = faker.phoneNumber().phoneNumber();
