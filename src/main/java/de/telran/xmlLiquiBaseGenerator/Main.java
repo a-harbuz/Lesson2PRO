@@ -45,7 +45,7 @@ public class Main {
                                 " table\">\n");
                     writer.write("    <insert tableName=\"" + nametable + "\">\n");
                     count++;
-                } else {
+                } else if (!(line.startsWith("//") || line.equals(""))) {
                     value =" ";
                     if (line.equals("id")) value = UUID.randomUUID().toString();
                     //if (nametable.equals("vehicle") && line.equals("name")){}

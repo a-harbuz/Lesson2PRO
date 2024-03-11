@@ -8,7 +8,7 @@ car_number
 initial_kilometers
 price
 vehicle_status
-created_at
+//created_at
 
 Table: contract
 id
@@ -17,7 +17,7 @@ contract_name
 cost_transportation_under_contract
 total_cost_transported_goods
 contract_status
-created_at
+//created_at
 //company_id
 
 Table: task
@@ -32,7 +32,7 @@ distance_traveled_kilometers
 fuel_costs_traveled
 task_status
 comment_if_task_canceled
-created_at
+//created_at
 //contract_id
 //company_id
 //vehicle_id
@@ -44,7 +44,7 @@ id
 service_type
 maintenance_cost
 maintenance_kilometers
-created_at
+//created_at
 //vehicle_id
 //company_id
 
@@ -56,7 +56,7 @@ contact_last_name
 email
 address
 phone
-created_at
+//created_at
 
 Table: employee
 id
@@ -64,8 +64,8 @@ first_name
 last_name
 is_driver
 is_working
-created_at
-employee_info_id
+//created_at
+//employee_info_id
 
 Table: employee_info
 id
