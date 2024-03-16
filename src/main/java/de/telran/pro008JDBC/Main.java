@@ -11,6 +11,7 @@ public class Main {
         //Class.forName("com.mysql.jdbc.Driver");
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection connection = DriverManager.getConnection(url, user, passwd);
+
         //otvech za zaprosi
         //PreparedStatement
         Statement statement = connection.createStatement();
@@ -21,5 +22,17 @@ public class Main {
             int id = resultSet.getInt("id");
             System.out.println("ID: "+id);
         }
+
+        resultSet = statement.executeQuery("SELECT * FROM accounts");
+        while (resultSet.next()) {
+            //String str = resultSet.getString("created_at");
+            //Объект ResultSet автоматически закрывается, когда сгенерировавший его объект Statement закрывается,
+            //выполняется повторно или используется для получения следующего результата из последовательности
+            //нескольких результатов.
+            String str = resultSet.getString("currency");
+            System.out.println("currency: "+str);
+        }
+
+        connection.close();
     }
 }

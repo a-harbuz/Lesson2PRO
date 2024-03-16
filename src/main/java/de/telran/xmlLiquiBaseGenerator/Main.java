@@ -6,6 +6,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.UUID;
 
 public class Main {
@@ -14,6 +15,7 @@ public class Main {
         generate("liqu2.txt");
         generate("liqu3.txt");
         generate("liqu4.txt");
+        System.out.println("Генерация закончена!");
     }
     public static void generate(String writeFile) {
         Faker faker = new Faker();
@@ -47,7 +49,7 @@ public class Main {
                     count++;
                 } else if (!(line.startsWith("//") || line.equals(""))) {
                     value =" ";
-                    if (line.equals("id")) value = UUID.randomUUID().toString();
+                    if (line.equals("id")) value = UUID.randomUUID().toString().replace("-","");
                     //if (nametable.equals("vehicle") && line.equals("name")){}
                     if (nametable.equals("employee") && line.equals("first_name")) value = faker.name().firstName();
                     if (nametable.equals("employee") && line.equals("last_name")) value = faker.name().lastName();
@@ -67,8 +69,11 @@ public class Main {
                     if (nametable.equals("company") && line.equals("address")) value = faker.address().fullAddress();
                     if (nametable.equals("company") && line.equals("phone")) value = faker.phoneNumber().phoneNumber();
 
+                    if (line.equals("created_at")) value = LocalDate.now().toString();
 
-                    writer.write("        <column name=\"" + line + "\" value=\""+ value +"\"/>\n");
+                    if (line.equals("id")) {
+                           writer.write("        <column name=\"" + line + "\" valueComputed=\"UNHEX('"+ value +"')\"/>\n");
+                    } else writer.write("        <column name=\"" + line + "\" value=\""+ value +"\"/>\n");
                 }
 
             }

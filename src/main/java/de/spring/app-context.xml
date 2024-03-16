@@ -1,0 +1,5 @@
+<!--<bean id="provider" class="de.telran.tmp.spring.decoupled.HelloWorldMessageProvider"/>-->
+
+<!--<bean id="renderer" class="de.telran.tmp.spring.decoupled.StandardOutMessageRenderer"-->
+<!--      p:messageProvider-ref="provider"/>-->
+<!--        </beans>-->

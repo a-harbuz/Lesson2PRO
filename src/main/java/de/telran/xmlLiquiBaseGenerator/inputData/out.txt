@@ -1,6 +1,7 @@
     <changeSet author="o.harbuz" id="insert test data into .... table">
         <insert tableName="products">
             <column name="id" value="3"/>
+            <column name="id" valueComputed="UNHEX('26e41ad9048248089dbbc917631f1b56')"/>
             <column name="name" value="mortgage"/>
             <column name="min_sum" value="10000"/>
             <column name="max_sum" value="2000000"/>
